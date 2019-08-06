@@ -113,7 +113,7 @@ const validateCardExpiryDate = ({target}) => {
   const edited = '01/'+target.value;
   const inputDate = new Date(edited);
   const fullDateToday = new Date();
-  const checkMonth = inputDate.getMonth()>fullDateToday.getMonth();
+  const checkMonth = (Number(target.value.split('/')[0])-1)>fullDateToday.getMonth();
   const checkYear = inputDate.getYear()>fullDateToday.getYear();
   const greater = () => {
     if (inputDate.getYear()===fullDateToday.getYear()){
