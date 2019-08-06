@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #fff;
+}
+  
+[data-cart-info] span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.material-icons {
+  font-size: 150px;
+}
+
+[data-credit-card] {
+  width: 435px;
+  min-height: 240px;
+  border-radius: 10px;
+  background-color: #5d6874;
+}
+
+[data-card-type] {
+  display: block;
+  width:120px;
+  height: 60px;
+}
+
+[data-cc-digits] {
+  margin-top: 2em;
+}
+
+[data-cc-digits] input {
+  color: #fff;
+  font-size: 2em;
+  line-height: 2em;
+  border: none;
+  background: none;
+  margin-right: 0.5em;
+}
+
+[data-cc-info] {
+  margin-top: 1em;
+}
+
+[data-cc-info] input {
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  background: none;
+}
+
+[data-cc-info] input:nth-child(2) {
+  padding-right: 10px;
+  float: right;
+}
+
+[data-pay-btn] {
+  position: fixed;
+  bottom: 20px;
+  width: 90%;
+  border:1px solid;
+}
+
+[data-cart-info],
+[data-credit-card] {
+  transform: scale(0.78);
+  margin-left: -3.4em;
+}
+
+[data-cc-info] input:focus,
+[data-cc-digits] input:focus {
+  outline: none;
+}
+
+.mdc-card__primary-action,
+.mdc-card__primary-action:hover {
+  cursor: auto;
+  padding: 20px;
+  min-height: inherit;
+}
+
+[data-credit-card] [data-card-type] {
+  transition: width 1.5s;
+  margin-left: calc(100% - 130px);
+}
+
+[data-credit-card].is-visa {
+  background: linear-gradient(135deg, #622774 0%, #c53364 100%);
+}
+
+[data-credit-card].is-mastercard {
+  background: linear-gradient(135deg, #65799b 0%, #5e2563 100%);
+}
+
+.is-visa [data-card-type],
+.is-mastercard [data-card-type] {
+  width: auto;
+}
+
+input.is-invalid,
+.is-invalid input {
+  text-decoration: line-through;
+}
+
+::placeholder {
+  color: #fff;
+}
